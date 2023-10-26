@@ -1,0 +1,32 @@
+
+/* 
+    Created on : Oct 18, 2023, 7:07:26 PM
+    Author     : jonb
+//#e0e0e0
+*/
+
+
+Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 15px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: azure;
+    
+}
+
+ChoiceBox {
+    -fx-max-width: 100%;
+}
+
+Separator {
+    -fx-margin: 10px;
+}
+
+VBox{
+    -fx-background-color:white;
+}

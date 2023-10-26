@@ -1,0 +1,29 @@
+
+/* 
+    Created on : Oct 18, 2023, 8:04:10 PM
+    Author     : jonb
+*/
+
+Button{
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(to bottom, #00C0D4, #008BA8); 
+    -fx-border-color: #007A8C; 
+    -fx-border-radius: 5px; 
+    -fx-background-radius: 5px; 
+    -fx-text-fill: white; 
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 2, 2); 
+    -fx-font-family: "Helvetica";
+}
+
+AnchorPane{
+    -fx-background-color: #2E2E4D;
+}
+
+TextField{
+    -fx-pref-width: 300px;
+    -fx-background-color: transparent; 
+    -fx-border-width: 0 0 2px 0; 
+    -fx-border-color: white; 
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #666;
+}
