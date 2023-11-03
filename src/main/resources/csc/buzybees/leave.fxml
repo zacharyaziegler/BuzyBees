@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="456.0" prefWidth="324.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LeaveRequestPage">
+    <children>
+        <VBox prefWidth="1200" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <HBox spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+            <ImageView fx:id="logo" fitHeight="40" fitWidth="100" />
+            <Button fx:id="homeButton" onAction="#switchToHome" styleClass="nav-button" text="Home" />
+            <Button fx:id="myInfoButton" styleClass="nav-button" text="My Info" />
+            <Button fx:id="tasksButton" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="scheduleButton" styleClass="nav-button" text="Schedule" />
+            <Button fx:id="leaveButton" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
+            <Button fx:id="filesButton" styleClass="nav-button" text="Files" />
+            <Button fx:id="payrollButton" styleClass="nav-button" text="Payroll" />
+            <TextField fx:id="searchField" promptText="Search...">
+                <HBox.margin>
+                    <Insets left="5.0" top="15.0" />
+                </HBox.margin>
+            </TextField>  
+            <Region HBox.hgrow="ALWAYS" /> 
+            <Button fx:id="settingsButton" styleClass="icon-button" />
+            <Button fx:id="helpButton" styleClass="icon-button" />
+            <Button fx:id="notificationsButton" styleClass="icon-button" />
+            <ImageView fx:id="profilePicture" fitHeight="40" fitWidth="40" />
+            <padding>
+                <Insets bottom="2.0" top="7.0" />
+            </padding>
+        </HBox>
+        </VBox>
+        <VBox alignment="CENTER" layoutY="67.0" prefHeight="389.0" prefWidth="1088.0" spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="67.0">
+            <GridPane alignment="CENTER" hgap="10" vgap="10">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+              
+                <Label prefHeight="31.0" prefWidth="66.0" text="Select Date:" GridPane.rowIndex="1" />
+                <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+              
+                <Label text="Leave Type:" GridPane.rowIndex="2" />
+                <ComboBox fx:id="leaveTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Vacation" />
+                            <String fx:value="PTO" />
+                            <String fx:value="Shift Swap" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+      
+              
+                <Label fx:id="employeeText" text="Select Employee to Swap:" visible="false" GridPane.rowIndex="3" />
+                <ComboBox fx:id="employeeComboBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Employee 1" />
+                            <String fx:value="Employee 2" />
+                          
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+      
+                <Label text="Reason:" GridPane.rowIndex="4" />
+                <TextArea fx:id="reasonField" promptText="Enter the reason for your leave" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+      
+            </GridPane>
+            <Button onAction="#handleSubmit" text="Submit Request" />
+        </VBox>
+    </children>
+</AnchorPane>

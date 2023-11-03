@@ -12,10 +12,18 @@ Button {
     -fx-font-size: 14px;
     -fx-padding: 15px;
     -fx-cursor: hand;
+    -fx-font-family: "Helvetica"; 
+    
+    
 }
 
 Button:hover {
-    -fx-background-color: azure;
+    -fx-background-color:lightyellow;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-scale-z: 1.05;
+    -fx-underline:true;
+    
     
 }
 
@@ -24,7 +32,7 @@ ChoiceBox {
 }
 
 Separator {
-    -fx-margin: 10px;
+    -fx-margin: 100px;
 }
 
 VBox{

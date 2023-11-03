@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: #FFFEFA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: #FFFEFA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LoginPage">
    <children>
       <ImageView fitHeight="895.0" fitWidth="1310.0" layoutX="-1.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -35,6 +35,6 @@
       </ImageView>
       <TextField layoutX="467.0" layoutY="353.0" prefHeight="38.0" prefWidth="421.0" />
       <TextField layoutX="468.0" layoutY="466.0" prefHeight="38.0" prefWidth="421.0" />
-      <Button layoutX="553.0" layoutY="531.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="50.0" prefWidth="253.0" text="Login" />
+      <Button fx:id="login" layoutX="553.0" layoutY="531.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="50.0" prefWidth="253.0" stylesheets="@login.css" text="Login" />
    </children>
 </AnchorPane>

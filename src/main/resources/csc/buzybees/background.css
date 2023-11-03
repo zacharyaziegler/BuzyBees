@@ -8,3 +8,45 @@
 AnchorPane {
     -fx-background-color: aliceblue;
 }
+
+.nav-button {
+    -fx-background-color:transparent;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-cursor: hand;
+    -fx-font-family: "Helvetica";
+}
+
+.nav-button:hover {
+    -fx-text-fill: green;
+    -fx-border-color: transparent; 
+    -fx-background-color: #F0F0F0;
+    -fx-border-width: .5px;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-scale-z: 1.05;
+    -fx-underline:true;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    /* You'd typically have some icon here. Placeholder for now: */
+    -fx-graphic: url('path_to_icon.png');
+    -fx-padding: 5px;
+}
+
+.shiny-yellow-background {
+    -fx-background-color: #E0E0E0;
+}
+
+.other-yellow-background {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #f2cb05, #ffbd00);
+}
+
+.nav-border {
+    -fx-border-color: gray;
+    -fx-border-width: 0 0 1px 0;
+}
+
