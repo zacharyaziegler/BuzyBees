@@ -4,7 +4,7 @@
     Author     : jonb
 */
 
-Button{
+Button:hover{
     -fx-font-weight: bold;
     -fx-background-color: linear-gradient(to bottom, #00C0D4, #008BA8); 
     -fx-border-color: #007A8C; 
@@ -12,7 +12,8 @@ Button{
     -fx-background-radius: 5px; 
     -fx-text-fill: white; 
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 2, 2); 
-    -fx-font-family: "Helvetica";
+    -fx-font-family: "Helvetica";  
+    
 }
 
 AnchorPane{
