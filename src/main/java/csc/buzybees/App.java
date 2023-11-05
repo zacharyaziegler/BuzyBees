@@ -1,5 +1,7 @@
 package csc.buzybees;
 
+import com.google.cloud.firestore.Firestore;
+import com.google.firebase.auth.FirebaseAuth;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,6 +17,10 @@ public class App extends Application {
 
     private static Scene scene;
 
+    public static Firestore fstore;
+    public static FirebaseAuth fauth;
+    private final FirestoreContext contxtFirebase = new FirestoreContext();
+
     /**
      *
      * @param stage
@@ -22,6 +28,10 @@ public class App extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
+        //code for firebase
+        fstore = (Firestore) contxtFirebase.firebase();
+        fauth = FirebaseAuth.getInstance();
+        
         scene = new Scene(loadFXML("login"), 1300, 850);
         stage.setScene(scene);
         stage.show(); // zach
