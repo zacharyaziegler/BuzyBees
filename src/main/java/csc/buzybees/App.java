@@ -34,7 +34,7 @@ public class App extends Application {
         
         scene = new Scene(loadFXML("login"), 1300, 850);
         stage.setScene(scene);
-        stage.show(); // zach
+        stage.show(); 
     }
 
     static void setRoot(String fxml) throws IOException {

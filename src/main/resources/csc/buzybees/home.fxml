@@ -21,7 +21,7 @@
                     <Button fx:id="homeButton" onAction="#switchToHome" styleClass="nav-button" text="Home" />
                     <Button fx:id="myInfoButton" styleClass="nav-button" text="My Info" />
                     <Button fx:id="tasksButton" styleClass="nav-button" text="Tasks" />
-                    <Button fx:id="scheduleButton" styleClass="nav-button" text="Schedule" />
+                    <Button fx:id="scheduleButton" onAction="#switchToSchedule" styleClass="nav-button" text="Schedule" />
                     <Button fx:id="leaveButton" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
                     <Button fx:id="filesButton" styleClass="nav-button" text="Files" />
                     <Button fx:id="payrollButton" styleClass="nav-button" text="Payroll" />
