@@ -60,5 +60,9 @@ public class HomePage {
         App.setRoot("home");
     }
     
+    @FXML
+    private void switchToSchedule(ActionEvent event) throws IOException {
+        App.setRoot("ScheduleView");
+    }
     
 }
