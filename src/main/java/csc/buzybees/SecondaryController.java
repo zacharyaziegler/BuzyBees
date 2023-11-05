@@ -18,7 +18,7 @@ public class SecondaryController {
     @FXML
     private Button contractsButton;
     @FXML
-    private Button complianceDocsButton;
+    private Button scheduleButton;
     @FXML
     private Button teamSettingsButton;
     @FXML
@@ -31,5 +31,10 @@ public class SecondaryController {
     @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("primary");
+    }
+    
+    @FXML
+    private void switchToSchedule() throws IOException {
+        App.setRoot("ScheduleView");
     }
 }
