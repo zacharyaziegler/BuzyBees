@@ -65,13 +65,13 @@ public class ScheduleController extends AnchorPane {
     @FXML
     public void initialize() {
 
-        VBox scheduleLayout = new VBox(10); // 10 is the spacing between elements
+        VBox scheduleLayout = new VBox(); // 10 is the spacing between elements
         updateMonthLabel(currentYearMonth);
         // Initialize the calendar grid and other components
         scheduleGrid = new GridPane();
-        scheduleGrid.setMinSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
-        scheduleGrid.setPrefSize(1100, 400); // Set preferred size as needed
-        scheduleGrid.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+        scheduleGrid.setMinSize(1100, 375);
+        scheduleGrid.setPrefSize(1100, 375); // Set preferred size as needed
+        scheduleGrid.setMaxSize(1100, 375);
 
         for (int i = 0; i < 7; i++) { // set contraints on rows and columns of GridPane
             ColumnConstraints column = new ColumnConstraints(150); // Set the preferred width of columns
@@ -80,8 +80,6 @@ public class ScheduleController extends AnchorPane {
             scheduleGrid.getRowConstraints().add(row);
         }
 
-        //scheduleGrid.setAlignment(Pos.CENTER); // Center the GridPane within its container
-        // scheduleGrid.setPadding(new Insets(10, 10, 10, 10)); // Add padding as needed 
         scheduleGrid.setGridLinesVisible(true);
         scheduleGrid.setVgap(10);
         scheduleGrid.setHgap(10);
@@ -92,7 +90,6 @@ public class ScheduleController extends AnchorPane {
         AnchorPane.setLeftAnchor(scheduleLayout, 10.0);
         AnchorPane.setRightAnchor(scheduleLayout, 10.0);
         scheduleContainer.getChildren().add(scheduleLayout); // Add the calendar to the container
-        //scheduleLayout.setAlignment(Pos.BOTTOM_CENTER);
     }
 
     private void updateSchedule() {
