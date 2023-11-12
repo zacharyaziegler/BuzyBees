@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="scheduleContainer" prefHeight="609.0" prefWidth="739.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.ScheduleController">
    <children>
-      <HBox layoutX="10.0" layoutY="10.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+      <HBox prefWidth="1043.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
          <padding>
             <Insets bottom="2.0" top="7.0" />
          </padding>
