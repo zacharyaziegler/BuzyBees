@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.NewRegisterController">
+   <children>
+      <ImageView fitHeight="854.0" fitWidth="1342.0" layoutX="-4.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../register%20page%20(Light%20version)%20background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="282.0" fitWidth="416.0" layoutX="457.0" layoutY="-51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../registerText.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtFirstName" layoutX="128.0" layoutY="191.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <TextField fx:id="txtLastName" layoutX="127.0" layoutY="287.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="131.0" layoutY="161.0" text="First Name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="255.0" text="Last Name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="344.0" text="Date of Birth:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDob" layoutX="128.0" layoutY="376.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="124.0" layoutY="444.0" text="Job Position:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtJobPosition" layoutX="125.0" layoutY="473.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="125.0" layoutY="530.0" text="Street Address:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStreetAddr" layoutX="125.0" layoutY="562.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="786.0" layoutY="153.0" text="State:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtState" layoutX="786.0" layoutY="185.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="786.0" layoutY="244.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="786.0" layoutY="244.0" text="Zip Code:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtZipCode" layoutX="789.0" layoutY="277.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="786.0" layoutY="337.0" text="Phone Number:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhoneNum" layoutX="786.0" layoutY="369.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="787.0" layoutY="432.0" text="Email:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="788.0" layoutY="464.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="795.0" layoutY="524.0" text="Username:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="790.0" layoutY="557.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="129.0" layoutY="618.0" text="City:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCity" layoutX="129.0" layoutY="650.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Label layoutX="796.0" layoutY="623.0" text="Password:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="791.0" layoutY="656.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Button fx:id="registerButton" layoutX="542.0" layoutY="741.0" mnemonicParsing="false" onAction="#switchToNewMember" prefHeight="50.0" prefWidth="253.0" stylesheets="@register.css" text="Register" />
+   </children>
+</AnchorPane>

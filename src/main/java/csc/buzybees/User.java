@@ -12,100 +12,168 @@ package csc.buzybees;
  */
 public class User {
     
-    //bool to represent manager status of a suer
-    //true means is a manager
-    //false means is not a manager
-    private boolean isManager;
+    // Member variables
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String jobPosition;
+    private String streetAddress;
+    private String city;
+    private String state;
+    private String zipCode;
+    private String phoneNumber;
+    private String email;
+    private String username;
+    private String password;
     
-    private String fName;
     
-    private String lName;
-    
-    private String birthday;
-    
-    private String position;
-    
-    private String userId;
-
     /**
      * default constructor to  create an "empty" user
      */
     public User() {
-        isManager = false;
-        fName = "";
-        lName = "";
-        birthday = "";
-        position = "";
-        userId = "";
+        this.firstName = "";
+        this.lastName = "";
+        this.dateOfBirth = "";
+        this.jobPosition = "";
+        this.streetAddress = "";
+        this.city = "";
+        this.state = "";
+        this.zipCode = "";
+        this.phoneNumber = "";
+        this.email = "";
+        this.username = "";
+        this.password = "";
     }
-
+    
     /**
      * constructor that takes member variables as parameters
      * 
-     * @param isManager manager status of new User
-     * @param fName first name of User
-     * @param lName last name of User
-     * @param birthday birthday of User
-     * @param position job/position of User
-     * @param userId unique ID to represent user 
+     * @param firstName
+     * @param lastName
+     * @param dateOfBirth
+     * @param jobPosition
+     * @param streetAddress
+     * @param city
+     * @param state
+     * @param zipCode
+     * @param phoneNumber
+     * @param email
+     * @param username
+     * @param password 
      */
-    public User(boolean isManager, String fName, String lName, String birthday, String position, String userId) {
-        this.isManager = isManager;
-        this.fName = fName;
-        this.lName = lName;
-        this.birthday = birthday;
-        this.position = position;
-        this.userId = userId;
+    public User(String firstName, String lastName, String dateOfBirth, String jobPosition, String streetAddress,
+                String city, String state, String zipCode, String phoneNumber, String email, String username,
+                String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.jobPosition = jobPosition;
+        this.streetAddress = streetAddress;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+  
+
+    //The following methods are get/set functions that read/alter User member variables easily
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    //following methods are get/set functions to read/alter User member variables easily
-    
-    public boolean isIsManager() {
-        return isManager;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setIsManager(boolean isManager) {
-        this.isManager = isManager;
+    public String getLastName() {
+        return lastName;
     }
 
-    public String getfName() {
-        return fName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public String getlName() {
-        return lName;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public String getJobPosition() {
+        return jobPosition;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public String getPosition() {
-        return position;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public String getCity() {
+        return city;
     }
 
-    public String getUserId() {
-        return userId;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public String getState() {
+        return state;
     }
-    
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
