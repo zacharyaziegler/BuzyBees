@@ -22,8 +22,11 @@ import java.io.IOException;
  *
  * @author JavaFX App
  */
+/*
 public class FirestoreContext {
 
+    private static Firestore firestore;
+     
     public Firestore firebase() {
         try {
             FirebaseOptions options = new FirebaseOptions.Builder()
@@ -37,4 +40,30 @@ public class FirestoreContext {
     }
 
     
+}
+*/
+public class FirestoreContext {
+
+    private static Firestore firestore;
+
+    public Firestore firebase() {
+        if (firestore == null) {
+            synchronized (this) {
+                if (firestore == null) { // Double check
+                    try {
+                        if (FirebaseApp.getApps().isEmpty()) { // Check if Firebase has already been initialized
+                            FirebaseOptions options = new FirebaseOptions.Builder()
+                                    .setCredentials(GoogleCredentials.fromStream(getClass().getResourceAsStream("key.json")))
+                                    .build();
+                            FirebaseApp.initializeApp(options);
+                        }
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                    firestore = FirestoreClient.getFirestore();
+                }
+            }
+        }
+        return firestore;
+    }
 }
