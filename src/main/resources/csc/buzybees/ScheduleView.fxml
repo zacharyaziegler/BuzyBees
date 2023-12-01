@@ -35,5 +35,6 @@
             <ImageView fx:id="profilePicture" fitHeight="40" fitWidth="40" />
          </children>
       </HBox>
+      <Button fx:id="createScheduleBtn" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToCreateSchedule" text="Create Employee Schedule" />
    </children>
 </AnchorPane>

@@ -35,7 +35,7 @@
             <Image url="@../../2.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtUsername" layoutX="467.0" layoutY="353.0" prefHeight="38.0" prefWidth="421.0" />
+      <TextField fx:id="txtEmail" layoutX="467.0" layoutY="353.0" prefHeight="38.0" prefWidth="421.0" />
       <Button fx:id="btnLogin" layoutX="553.0" layoutY="531.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="50.0" prefWidth="253.0" stylesheets="@register.css" text="Login" />
       <Button fx:id="registerButton" layoutX="461.0" layoutY="604.0" mnemonicParsing="false" onAction="#switchToRegister" prefHeight="39.0" prefWidth="420.0" text="Don't have an account? Click here to register.">
          <font>

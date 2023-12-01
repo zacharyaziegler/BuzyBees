@@ -4,6 +4,7 @@
  */
 package csc.buzybees;
 
+import com.google.firebase.auth.FirebaseAuth;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
@@ -60,6 +61,8 @@ public class ScheduleController extends AnchorPane {
     private Button scheduleButton;
     @FXML
     private Button leaveButton;
+    @FXML
+    private Button createScheduleBtn;
 
     private YearMonth currentYearMonth = YearMonth.now();
 //    private YearMonth currentYearMonth = YearMonth.of(2023, Month.DECEMBER); // debugging purposes
