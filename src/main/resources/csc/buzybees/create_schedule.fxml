@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="1037.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="csc.buzybees.CreateScheduleController">
+   <children>
+      <HBox spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+         <padding>
+            <Insets bottom="2.0" top="7.0" />
+         </padding>
+         <children>
+            <ImageView fx:id="logo" fitHeight="40" fitWidth="100" />
+            <Button fx:id="homeButton" onAction="#switchToHome" styleClass="nav-button" text="Home" />
+            <Button fx:id="myInfoButton" styleClass="nav-button" text="My Info" />
+            <Button fx:id="tasksButton" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="scheduleButton" onAction="#switchToSchedule" styleClass="nav-button" text="Schedule" />
+            <Button fx:id="leaveButton" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
+            <Button fx:id="filesButton" styleClass="nav-button" text="Files" />
+            <Button fx:id="payrollButton" styleClass="nav-button" text="Payroll" />
+            <TextField fx:id="searchField" promptText="Search...">
+               <HBox.margin>
+                  <Insets left="5.0" top="15.0" />
+               </HBox.margin>
+            </TextField>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="settingsButton" styleClass="icon-button" />
+            <Button fx:id="helpButton" styleClass="icon-button" />
+            <Button fx:id="notificationsButton" styleClass="icon-button" />
+            <ImageView fx:id="profilePicture" fitHeight="40" fitWidth="40" />
+         </children>
+      </HBox>
+      <ComboBox fx:id="employeeComboBox" layoutX="816.0" layoutY="460.0" prefWidth="150.0" />
+      <Label layoutX="720.0" layoutY="464.0" text="Schedule is for:" />
+      <DatePicker fx:id="shiftDatePicker" layoutX="234.0" layoutY="186.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="121.0" layoutY="190.0" text="Select date of shift:" />
+      <TableView fx:id="pendingShiftsTable" layoutX="501.0" layoutY="146.0" prefHeight="308.0" prefWidth="465.0">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="startTimeColumn" prefWidth="114.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="114.0" text="End Time" />
+            <TableColumn fx:id="detailsColumn" prefWidth="160.0" text="Details" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="startHoursComboBox" layoutX="197.0" layoutY="223.0" prefHeight="17.0" prefWidth="59.0" />
+      <Label layoutX="159.0" layoutY="227.0" text="Hour:" />
+      <ComboBox fx:id="startMinutesComboBox" layoutX="325.0" layoutY="223.0" prefHeight="17.0" prefWidth="59.0" />
+      <Label layoutX="276.0" layoutY="227.0" text="Minute:" />
+      <Label layoutX="127.0" layoutY="305.0" text="Details:" />
+      <TextField fx:id="detailsTextField" layoutX="177.0" layoutY="301.0" prefHeight="25.0" prefWidth="208.0" />
+      <Button fx:id="addShiftBtn" layoutX="177.0" layoutY="350.0" mnemonicParsing="false" onAction="#addShift" text="Add Shift to Pending Shifts" />
+      <Button fx:id="removeSelectedShiftBtn" layoutX="501.0" layoutY="460.0" mnemonicParsing="false" onAction="#removeShift" text="Remove Selected Shift" />
+      <Button fx:id="submitScheduleBtn" layoutX="839.0" layoutY="495.0" mnemonicParsing="false" onAction="#submitSchedule" text="Submit Schedule" />
+      <Label layoutX="93.0" layoutY="227.0" text="Start Time:" />
+      <ComboBox fx:id="endHoursComboBox" layoutX="197.0" layoutY="257.0" prefHeight="17.0" prefWidth="59.0" />
+      <Label layoutX="159.0" layoutY="261.0" text="Hour:" />
+      <ComboBox fx:id="endMinutesComboBox" layoutX="325.0" layoutY="257.0" prefHeight="17.0" prefWidth="59.0" />
+      <Label layoutX="276.0" layoutY="261.0" text="Minute:" />
+      <Label layoutX="98.0" layoutY="261.0" text="End Time:" />
+   </children>
+</AnchorPane>

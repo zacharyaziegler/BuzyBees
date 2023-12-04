@@ -5,6 +5,9 @@
  */
 package csc.buzybees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This class includes all member variables and methods to make up a User
  *
@@ -25,6 +28,7 @@ public class User {
     private String email;
     private String username;
     private String password;
+    private List<Shift> schedule; // List to store the user's schedule
     
     
     /**
@@ -43,6 +47,7 @@ public class User {
         this.email = "";
         this.username = "";
         this.password = "";
+        this.schedule = new ArrayList<>();
     }
     
     /**
@@ -60,10 +65,11 @@ public class User {
      * @param email
      * @param username
      * @param password 
+     * @param schedule 
      */
     public User(String firstName, String lastName, String dateOfBirth, String jobPosition, String streetAddress,
                 String city, String state, String zipCode, String phoneNumber, String email, String username,
-                String password) {
+                String password, List<Shift> schedule) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -76,6 +82,7 @@ public class User {
         this.email = email;
         this.username = username;
         this.password = password;
+        this.schedule = schedule; // Initialize the schedule
     }
   
 
@@ -175,5 +182,20 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public void addShift(Shift shift) {
+        if (this.schedule == null) {
+            this.schedule = new ArrayList<>();
+        }
+        this.schedule.add(shift);
+    }
+    
+    public List<Shift> getSchedule() {
+        return schedule;
+    }
+    
+    public void setSchedule(List<Shift> schedule) {
+        this.schedule = schedule;
     }
 }
