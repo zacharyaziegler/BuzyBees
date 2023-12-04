@@ -85,8 +85,12 @@ public class LoginPage {
                 // Parse the response to JSON
                 JSONObject jsonResponse = new JSONObject(response.toString());
 
-                // Get the ID token (and other data if needed)
+                // Get the ID token and localID
                 String idToken = jsonResponse.getString("idToken");
+                String localId = jsonResponse.getString("localId"); // This is the user's Firebase ID
+                // Set the ID token and user ID in the SessionManager
+                SessionManager.getInstance().setIdToken(idToken);
+                SessionManager.getInstance().setUserId(localId);
 
                 App.setRoot("home");
 
