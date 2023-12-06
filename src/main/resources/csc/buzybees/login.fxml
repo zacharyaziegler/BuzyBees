@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: #FFFEFA;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LoginPage">
    <children>
-      <ImageView fitHeight="895.0" fitWidth="1310.0" layoutX="-1.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="895.0" fitWidth="1310.0" layoutX="-6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../welcome_login%20page%20(Light%20Version)%20background.png" />
          </image>
@@ -25,9 +25,9 @@
             <Image url="@../../loginWelcome.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="107.0" fitWidth="107.0" layoutX="457.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="38.0" fitWidth="61.0" layoutX="465.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../1.png" />
+            <Image url="@../../emailText.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="107.0" fitWidth="107.0" layoutX="455.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
@@ -35,13 +35,16 @@
             <Image url="@../../2.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtEmail" layoutX="467.0" layoutY="353.0" prefHeight="38.0" prefWidth="421.0" />
-      <Button fx:id="btnLogin" layoutX="553.0" layoutY="531.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="50.0" prefWidth="253.0" stylesheets="@register.css" text="Login" />
-      <Button fx:id="registerButton" layoutX="461.0" layoutY="604.0" mnemonicParsing="false" onAction="#switchToRegister" prefHeight="39.0" prefWidth="420.0" text="Don't have an account? Click here to register.">
+      <TextField fx:id="txtEmail" layoutX="467.0" layoutY="353.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 25;" />
+      <Button fx:id="btnLogin" layoutX="552.0" layoutY="529.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="50.0" prefWidth="253.0" stylesheets="@login.css" text="Login">
          <font>
             <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="registerButton" layoutX="499.0" layoutY="596.0" mnemonicParsing="false" onAction="#switchToRegister" prefHeight="22.0" prefWidth="356.0" stylesheets="@loginRegister.css" text="Don't have an account? Click here to register">
+         <font>
+            <Font size="16.0" />
          </font>
       </Button>
-      <PasswordField fx:id="txtPassword" layoutX="468.0" layoutY="466.0" prefHeight="38.0" prefWidth="421.0" />
+      <PasswordField fx:id="txtPassword" layoutX="468.0" layoutY="466.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 25;" />
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@
             <Image url="@../../newMemberText.png" />
          </image>
       </ImageView>
-      <Button layoutX="472.0" layoutY="569.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="86.0" prefWidth="380.0" text="Go Back to Login">
+      <Button layoutX="472.0" layoutY="569.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="86.0" prefWidth="380.0" stylesheets="@login.css" text="Go Back to Login">
          <font>
             <Font size="30.0" />
          </font>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.NewRegisterController">
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.NewRegisterController">
    <children>
       <ImageView fitHeight="854.0" fitWidth="1342.0" layoutX="-4.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -97,7 +97,15 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="registerButton" layoutX="539.0" layoutY="700.0" mnemonicParsing="false" onAction="#switchToNewMember" prefHeight="50.0" prefWidth="253.0" text="Register" />
-      <PasswordField fx:id="txtPassword" layoutX="797.0" layoutY="657.0" />
+      <Button fx:id="registerButton" layoutX="539.0" layoutY="718.0" mnemonicParsing="false" onAction="#switchToNewMember" prefHeight="50.0" prefWidth="253.0" stylesheets="@login.css" text="Register">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <PasswordField fx:id="txtPassword" layoutX="792.0" layoutY="657.0" prefHeight="38.0" prefWidth="421.0" style="-fx-background-radius: 50;" />
+      <Button layoutX="42.0" layoutY="42.0" mnemonicParsing="false" onAction="#returnToLogin" prefHeight="50.0" prefWidth="178.0" stylesheets="@login.css" text="Back">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

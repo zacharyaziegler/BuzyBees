@@ -3,28 +3,28 @@
     Created on : Oct 18, 2023, 8:04:10 PM
     Author     : jonb
 */
-
-Button:hover{
+.button{
+    -fx-background-color: #FFD359;
+    -fx-background-radius: 1000 1000 1000 1000;
+    -fx-text-fill: White;  
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(to bottom, #00C0D4, #008BA8); 
-    -fx-border-color: #007A8C; 
-    -fx-border-radius: 5px; 
-    -fx-background-radius: 5px; 
-    -fx-text-fill: white; 
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 2, 2); 
-    -fx-font-family: "Helvetica";  
-    
+}
+.button:hover{
+    -fx-background-color: #FFE08B;
+    -fx-width: 50px;
+    -fix-height: 50px;
+    -fx-font: 20px "System";
+    -fx-text-fill: White;  
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.button:pressed{
+     -fx-background-color: #FFD359;
+     -fx-width: 50px;
+     -fix-height: 50px;
+     -fx-font: 20px "System";
+     -fx-text-fill: White;  
+     -fx-font-weight: bold;
 }
 
-AnchorPane{
-    -fx-background-color: #2E2E4D;
-}
 
-TextField{
-    -fx-pref-width: 300px;
-    -fx-background-color: transparent; 
-    -fx-border-width: 0 0 2px 0; 
-    -fx-border-color: white; 
-    -fx-text-fill: white;
-    -fx-prompt-text-fill: #666;
-}

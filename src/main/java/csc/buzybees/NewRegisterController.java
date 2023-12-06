@@ -98,6 +98,11 @@ public class NewRegisterController {
         }, Executors.newSingleThreadExecutor());
 
     }
+    
+    @FXML
+    void returnToLogin(ActionEvent event) throws IOException {
+        App.setRoot("login");
+    }
 
     @FXML
     void switchToNewMember(ActionEvent event) throws IOException, FirebaseAuthException {

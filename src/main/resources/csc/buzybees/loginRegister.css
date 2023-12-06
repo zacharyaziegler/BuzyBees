@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 5, 2023, 7:51:42 PM
+    Author     : catherinearevalo
+*/
+
+.button {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-padding: 0;
+  -fx-text-fill: black;
+  -fx-underline: false;
+}
+
+.button:hover {
+  -fx-text-fill: darkblue;
+  -fx-underline: true;
+   -fx-cursor: hand;
+}
+
+.button:pressed {
+  -fx-text-fill: red;
+}
+
+.button:focused {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+}
+
