@@ -1,9 +1,11 @@
-
-/* 
-    Created on : Oct 18, 2023, 7:45:34 PM
-    Author     : jonb
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
-
+/* 
+    Created on : Dec 9, 2023, 11:47:56 PM
+    Author     : catherinearevalo
+*/
 
 AnchorPane {
     -fx-background-color: FFFEFA;
@@ -52,3 +54,33 @@ AnchorPane {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6, 0, 0, 2);
 }
 
+/* Updated ComboBox Styles */
+.combo-box {
+    -fx-background-color: linear-gradient(#fcfcfc, #f3f3f3);
+    -fx-background-insets: 0, 0, 1, 0 inset;
+    -fx-background-radius: 5;
+    -fx-padding: 3px 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5px;
+}
+
+/* Consistent Input Field Styles */
+.text-field, .date-picker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused, .date-picker:focused {
+    -fx-border-color: #a8d8ea;
+}
+
+/* Placeholder Text Style */
+.placeholder {
+    -fx-font-style: italic;
+    -fx-opacity: 0.8;
+}

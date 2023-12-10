@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package csc.buzybees;
 
 import com.google.api.core.ApiFuture;
@@ -41,6 +42,7 @@ import javafx.scene.layout.VBox;
  *
  * @author zach
  */
+
 public class ScheduleController extends AnchorPane {
 
     @FXML
@@ -82,6 +84,7 @@ public class ScheduleController extends AnchorPane {
     private FirestoreContext firestoreContext;
     private FirebaseAuth auth;
 
+    
     @FXML
     public void initialize() {
         String[] dayNames = {"Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"}; // day labels on top of schedule grid
@@ -325,6 +328,7 @@ public class ScheduleController extends AnchorPane {
         monthLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
     }
 
+
     @FXML
     private void switchToHome(ActionEvent event) throws IOException {
         App.setRoot("home");
@@ -343,6 +347,11 @@ public class ScheduleController extends AnchorPane {
     @FXML
     private void switchToCreateSchedule(ActionEvent event) throws IOException {
         App.setRoot("create_schedule");
+    }
+    
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
     }
 
 }
