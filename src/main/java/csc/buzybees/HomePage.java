@@ -41,6 +41,7 @@ public class HomePage {
     @FXML
     private Button leaveButton;
 
+    @FXML
     private void switchToLogin() throws IOException {
         App.setRoot("login");
     }
@@ -63,6 +64,11 @@ public class HomePage {
     @FXML
     private void switchToSchedule(ActionEvent event) throws IOException {
         App.setRoot("ScheduleView");
+    }
+    
+    @FXML
+    private void switchToCreateSchedule(ActionEvent event) throws IOException {
+        App.setRoot("create_schedule");
     }
     
 }

@@ -8,8 +8,6 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -17,46 +15,46 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="456.0" prefWidth="324.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LeaveRequestPage">
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LeaveRequestPage">
     <children>
-        <VBox prefWidth="1200" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
-        <HBox spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
-            <ImageView fx:id="logo" fitHeight="40" fitWidth="100" />
-            <Button fx:id="homeButton" onAction="#switchToHome" styleClass="nav-button" text="Home" />
-            <Button fx:id="myInfoButton" styleClass="nav-button" text="My Info" />
-            <Button fx:id="tasksButton" styleClass="nav-button" text="Tasks" />
-            <Button fx:id="scheduleButton" styleClass="nav-button" text="Schedule" />
-            <Button fx:id="leaveButton" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
-            <Button fx:id="filesButton" styleClass="nav-button" text="Files" />
-            <Button fx:id="payrollButton" styleClass="nav-button" text="Payroll" />
-            <TextField fx:id="searchField" promptText="Search...">
-                <HBox.margin>
-                    <Insets left="5.0" top="15.0" />
-                </HBox.margin>
-            </TextField>  
-            <Region HBox.hgrow="ALWAYS" /> 
-            <Button fx:id="settingsButton" styleClass="icon-button" />
-            <Button fx:id="helpButton" styleClass="icon-button" />
-            <Button fx:id="notificationsButton" styleClass="icon-button" />
-            <ImageView fx:id="profilePicture" fitHeight="40" fitWidth="40" />
-            <padding>
-                <Insets bottom="2.0" top="7.0" />
-            </padding>
-        </HBox>
-        </VBox>
-        <VBox alignment="CENTER" layoutY="67.0" prefHeight="389.0" prefWidth="1088.0" spacing="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="67.0">
-            <GridPane alignment="CENTER" hgap="10" vgap="10">
+      <HBox layoutX="-5.0" prefHeight="68.0" prefWidth="1316.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+         <padding>
+            <Insets bottom="2.0" top="7.0" />
+         </padding>
+         <children>
+            <Region prefHeight="60.0" prefWidth="250.0" />
+            <Button fx:id="homeButton1" onAction="#switchToHome" styleClass="nav-button" text="Home" />
+            <Button fx:id="myInfoButton1" styleClass="nav-button" text="My Info" />
+            <Button fx:id="tasksButton1" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="scheduleButton1" onAction="#switchToSchedule" styleClass="nav-button" text="View Schedule" />
+            <Button fx:id="scheduleButton11" layoutX="649.0" layoutY="17.0" onAction="#switchToCreateSchedule" styleClass="nav-button" text="Create Schedule" />
+            <Button fx:id="leaveButton2" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
+            <Button fx:id="leaveButton1" onAction="#switchToLogin" styleClass="nav-button" text="Logout" />
+            <Region prefHeight="60.0" prefWidth="230.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+        <VBox alignment="CENTER" layoutX="286.0" layoutY="197.0" prefHeight="419.0" prefWidth="806.0" spacing="20" stylesheets="@createschedule.css" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="197.0">
+            <GridPane alignment="CENTER" hgap="10" prefWidth="1297.0" vgap="10">
                 <padding>
                     <Insets bottom="20" left="20" right="20" top="20" />
                 </padding>
               
-                <Label prefHeight="31.0" prefWidth="66.0" text="Select Date:" GridPane.rowIndex="1" />
-                <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                   <Label prefHeight="31.0" prefWidth="109.0" text="Select Date:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+                <DatePicker fx:id="datePicker" prefHeight="41.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       
-              
-                <Label text="Leave Type:" GridPane.rowIndex="2" />
-                <ComboBox fx:id="leaveTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                 
+                <Label text="Leave Type:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+                <ComboBox fx:id="leaveTypeComboBox" prefHeight="33.0" prefWidth="161.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="Vacation" />
@@ -66,7 +64,7 @@
                     </items>
                 </ComboBox>
       
-              
+                 
                 <Label fx:id="employeeText" text="Select Employee to Swap:" visible="false" GridPane.rowIndex="3" />
                 <ComboBox fx:id="employeeComboBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <items>
@@ -74,12 +72,20 @@
                             <String fx:value="Employee 1" />
                             <String fx:value="Employee 2" />
                           
-                        </FXCollections>
+                           </FXCollections>
                     </items>
                 </ComboBox>
       
-                <Label text="Reason:" GridPane.rowIndex="4" />
-                <TextArea fx:id="reasonField" promptText="Enter the reason for your leave" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                   <Label text="Reason:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+                <TextArea fx:id="reasonField" promptText="Enter the reason for your leave" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
                 <columnConstraints>
                     <ColumnConstraints />
                     <ColumnConstraints />
@@ -90,10 +96,15 @@
                     <RowConstraints />
                     <RowConstraints />
                     <RowConstraints />
+               <RowConstraints />
                 </rowConstraints>
       
-            </GridPane>
-            <Button onAction="#handleSubmit" text="Submit Request" />
+               </GridPane>
         </VBox>
+         <Button layoutX="630.0" layoutY="642.0" onAction="#handleSubmit" prefHeight="44.0" prefWidth="228.0" stylesheets="@login.css" text="Submit Request">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

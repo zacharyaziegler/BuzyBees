@@ -2,39 +2,34 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 
-<AnchorPane id="AnchorPane" fx:id="scheduleContainer" prefHeight="609.0" prefWidth="739.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.ScheduleController">
+<AnchorPane id="AnchorPane" fx:id="scheduleContainer" prefHeight="850.0" prefWidth="1300.0" stylesheets="@scheduleView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.ScheduleController">
    <children>
-      <HBox prefWidth="1043.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+      <ImageView fitHeight="894.0" fitWidth="1329.0" layoutX="-5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../register%20page%20(Light%20version)%20background.png" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="68.0" prefWidth="1326.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
          <padding>
             <Insets bottom="2.0" top="7.0" />
          </padding>
          <children>
-            <ImageView fx:id="logo" fitHeight="40" fitWidth="100" />
-            <Button fx:id="homeButton" onAction="#switchToHome" styleClass="nav-button" text="Home" />
-            <Button fx:id="myInfoButton" styleClass="nav-button" text="My Info" />
-            <Button fx:id="tasksButton" styleClass="nav-button" text="Tasks" />
-            <Button fx:id="scheduleButton" onAction="#switchToSchedule" styleClass="nav-button" text="Schedule" />
-            <Button fx:id="leaveButton" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
-            <Button fx:id="filesButton" styleClass="nav-button" text="Files" />
-            <Button fx:id="payrollButton" styleClass="nav-button" text="Payroll" />
-            <TextField fx:id="searchField" promptText="Search...">
-               <HBox.margin>
-                  <Insets left="5.0" top="15.0" />
-               </HBox.margin>
-            </TextField>
-            <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="settingsButton" styleClass="icon-button" />
-            <Button fx:id="helpButton" styleClass="icon-button" />
-            <Button fx:id="notificationsButton" styleClass="icon-button" />
-            <ImageView fx:id="profilePicture" fitHeight="40" fitWidth="40" />
+            <Region prefHeight="60.0" prefWidth="260.0" />
+            <Button fx:id="homeButton1" onAction="#switchToHome" styleClass="nav-button" text="Home" />
+            <Button fx:id="myInfoButton1" styleClass="nav-button" text="My Info" />
+            <Button fx:id="tasksButton1" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="scheduleButton1" onAction="#switchToSchedule" styleClass="nav-button" text="View Schedule" />
+            <Button fx:id="scheduleButton11" layoutX="649.0" layoutY="17.0" onAction="#switchToCreateSchedule" styleClass="nav-button" text="Create Schedule" />
+            <Button fx:id="leaveButton2" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
+            <Button fx:id="leaveButton1" onAction="#switchToLogin" styleClass="nav-button" text="Logout" />
+            <Region prefHeight="60.0" prefWidth="230.0" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
-      <Button fx:id="createScheduleBtn" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToCreateSchedule" text="Create Employee Schedule" />
    </children>
 </AnchorPane>

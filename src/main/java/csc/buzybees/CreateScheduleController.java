@@ -203,6 +203,11 @@ public class CreateScheduleController {
         // Run the task using a new thread
         new Thread(task).start();
     }
+    
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
+    }
 
     @FXML
     private void switchToHome(ActionEvent event) throws IOException {
@@ -217,6 +222,11 @@ public class CreateScheduleController {
     @FXML
     private void switchToSchedule(ActionEvent event) throws IOException {
         App.setRoot("ScheduleView");
+    }
+    
+    @FXML
+    private void switchToCreateSchedule(ActionEvent event) throws IOException {
+        App.setRoot("create_schedule");
     }
 
 }

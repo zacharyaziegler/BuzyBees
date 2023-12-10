@@ -90,8 +90,30 @@ public class LeaveRequestPage {
     private void switchToHome(ActionEvent event) throws IOException {
         App.setRoot("home");
     }
+    
+    @FXML
+    private void switchToSchedule(ActionEvent event) throws IOException {
+        App.setRoot("ScheduleView");
+    }
 
     @FXML
-    private void switchToLeaveRequestPage(ActionEvent event) {
+    private void switchToLeaveRequestPage(ActionEvent event) throws IOException {
+        App.setRoot("leave");
+    }
+    
+    @FXML
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
+    }
+    
+    @FXML
+    private void switchToLeave() throws IOException {
+        App.setRoot("leave");
+    }
+    
+    @FXML
+    private void switchToCreateSchedule(ActionEvent event) throws IOException {
+        App.setRoot("create_schedule");
     }
 }
+
