@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.MyInfoController">
+   <children>
+      <HBox layoutX="-2.0" layoutY="-3.0" prefHeight="68.0" prefWidth="1306.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
+         <padding>
+            <Insets bottom="2.0" top="7.0" />
+         </padding>
+         <children>
+            <Region prefHeight="60.0" prefWidth="250.0" />
+            <Button fx:id="homeButton1" onAction="#switchToHome" styleClass="nav-button" text="Home" />
+            <Button fx:id="myInfoButton1" onAction="#switchToMyInfo" styleClass="nav-button" text="My Info" />
+            <Button fx:id="tasksButton1" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="scheduleButton1" onAction="#switchToViewSchedule" styleClass="nav-button" text="View Schedule" />
+            <Button fx:id="scheduleButton11" layoutX="649.0" layoutY="17.0" onAction="#switchToCreateSchedule" styleClass="nav-button" text="Create Schedule" />
+            <Button fx:id="leaveButton2" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
+            <Button fx:id="leaveButton1" onAction="#Logout" styleClass="nav-button" text="Logout" />
+            <Region prefHeight="60.0" prefWidth="230.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="724.0" fitWidth="739.0" layoutX="518.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../myinfocard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="263.0" fitWidth="299.0" layoutX="89.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconbee.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelBigName" layoutX="206.0" layoutY="464.0" text="Name">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="774.0" layoutY="633.0" mnemonicParsing="false" onAction="#onViewInformationClicked" prefHeight="54.0" prefWidth="212.0" stylesheets="@login.css" text="View Information">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="574.0" layoutY="311.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelName" layoutX="683.0" layoutY="311.0" text="Name Place">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="369.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAddr" layoutX="681.0" layoutY="368.0" text="Address Place">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="574.0" layoutY="425.0" text="City:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCity" layoutX="684.0" layoutY="424.0" text="City Place">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="484.0" text="State:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelState" layoutX="686.0" layoutY="484.0" text="State Place">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="571.0" layoutY="541.0" text="Zip Code:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelZip" layoutX="685.0" layoutY="539.0" text="Zip Place">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="941.0" layoutY="310.0" text="Date Of Birth:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDOB" layoutX="1065.0" layoutY="311.0" text="DOB">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="939.0" layoutY="369.0" prefHeight="23.0" prefWidth="112.0" text="Job Position:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPosition" layoutX="1062.0" layoutY="369.0" text="Position">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="939.0" layoutY="425.0" prefHeight="23.0" prefWidth="124.0" text="Phone Number:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPhone" layoutX="1074.0" layoutY="425.0" prefHeight="23.0" prefWidth="158.0" text="Phone">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

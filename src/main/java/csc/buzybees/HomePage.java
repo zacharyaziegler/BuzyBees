@@ -116,4 +116,9 @@ public class HomePage {
         alert.showAndWait();
     }
     
+    @FXML
+    private void switchToMyInfo() throws IOException {
+        App.setRoot("myInfo");
+    }
+    
 }
