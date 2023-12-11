@@ -115,5 +115,10 @@ public class LeaveRequestPage {
     private void switchToCreateSchedule(ActionEvent event) throws IOException {
         App.setRoot("create_schedule");
     }
+    
+    @FXML
+    private void switchToMyInfo() throws IOException {
+        App.setRoot("myInfo");
+    }
 }
 

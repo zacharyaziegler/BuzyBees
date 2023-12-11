@@ -353,5 +353,10 @@ public class ScheduleController extends AnchorPane {
     private void switchToLogin() throws IOException {
         App.setRoot("login");
     }
+    
+    @FXML
+    private void switchToMyInfo() throws IOException {
+        App.setRoot("myInfo");
+    }
 
 }

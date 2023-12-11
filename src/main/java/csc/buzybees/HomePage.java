@@ -71,4 +71,9 @@ public class HomePage {
         App.setRoot("create_schedule");
     }
     
+    @FXML
+    private void switchToMyInfo() throws IOException {
+        App.setRoot("myInfo");
+    }
+    
 }
