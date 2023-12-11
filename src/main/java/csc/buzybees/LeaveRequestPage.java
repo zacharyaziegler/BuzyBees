@@ -1,6 +1,13 @@
 package csc.buzybees;
 
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.QueryDocumentSnapshot;
+import com.google.cloud.firestore.QuerySnapshot;
+import com.google.firebase.cloud.FirestoreClient;
 import java.io.IOException;
+import java.util.List;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -20,10 +27,10 @@ import javafx.scene.image.ImageView;
 public class LeaveRequestPage {
 
     @FXML
-    private ComboBox<?> leaveTypeComboBox;
+    private ComboBox<String> leaveTypeComboBox;
     private Label swapLabel;
     @FXML
-    private ComboBox<?> employeeComboBox;
+    private ComboBox<String> employeeComboBox;
     @FXML
     private DatePicker datePicker;
     @FXML
@@ -31,33 +38,22 @@ public class LeaveRequestPage {
     @FXML
     private Label employeeText;
     @FXML
-    private Button homeButton;
+    private Button homeButton1;
     @FXML
-    private Button scheduleButton;
+    private Button myInfoButton1;
     @FXML
-    private Button leaveButton;
+    private Button tasksButton1;
     @FXML
-    private ImageView logo;
+    private Button scheduleButton1;
     @FXML
-    private Button myInfoButton;
+    private Button scheduleButton11;
     @FXML
-    private Button tasksButton;
+    private Button leaveButton2;
     @FXML
-    private Button filesButton;
-    @FXML
-    private Button payrollButton;
-    @FXML
-    private TextField searchField;
-    @FXML
-    private Button settingsButton;
-    @FXML
-    private Button helpButton;
-    @FXML
-    private Button notificationsButton;
-    @FXML
-    private ImageView profilePicture;
+    private Button leaveButton1;
 
     public void initialize() {
+        populateEmployeeComboBox();
         // Add a change listener to the leaveTypeComboBox
         leaveTypeComboBox.valueProperty().addListener((observable, oldValue, newValue) -> {
             if ("Shift Swap".equals(newValue)) {
@@ -74,6 +70,28 @@ public class LeaveRequestPage {
             }
         });
     }
+    
+    private void populateEmployeeComboBox() {
+    Task<Void> task = new Task<Void>() {
+        @Override
+        protected Void call() throws Exception {
+            Firestore db = FirestoreClient.getFirestore();
+            // Assume "users" is the name of the collection where user documents are stored
+            ApiFuture<QuerySnapshot> future = db.collection("users").get();
+            // Block and get the query results
+            List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+            for (QueryDocumentSnapshot document : documents) {
+                if (document.exists()) {
+                    // Assuming the field that contains the name is "firstName"
+                    String name = document.getString("firstName");
+                    javafx.application.Platform.runLater(() -> employeeComboBox.getItems().add(name));
+                }
+            }
+            return null;
+        }
+    };
+    new Thread(task).start();
+}
 
     @FXML
     private void handleSubmit(ActionEvent event) {
@@ -106,7 +124,6 @@ public class LeaveRequestPage {
         App.setRoot("login");
     }
     
-    @FXML
     private void switchToLeave() throws IOException {
         App.setRoot("leave");
     }

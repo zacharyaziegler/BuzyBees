@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.HomePage">
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.HomePage">
     <children>
       <ImageView fitHeight="857.0" fitWidth="1303.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../homeBackground1.png" />
          </image>
       </ImageView>
-            <Label layoutX="226.0" layoutY="159.0" style="-fx-text-fill: Black;" text="Employee Name">
+            <Label fx:id="userName" layoutX="226.0" layoutY="159.0" style="-fx-text-fill: Black;" text="Employee Name">
                 <font>
                     <Font size="36.0" />
                 </font>
@@ -47,7 +47,7 @@
             <Region prefHeight="60.0" prefWidth="250.0" />
             <Button fx:id="homeButton1" onAction="#switchToHome" styleClass="nav-button" text="Home" />
             <Button fx:id="myInfoButton1" styleClass="nav-button" text="My Info" />
-            <Button fx:id="tasksButton1" styleClass="nav-button" text="Tasks" />
+            <Button fx:id="tasksButton1" onAction="#switchToTasks" styleClass="nav-button" text="Tasks" />
             <Button fx:id="scheduleButton1" onAction="#switchToSchedule" styleClass="nav-button" text="View Schedule" />
             <Button fx:id="scheduleButton11" layoutX="649.0" layoutY="17.0" onAction="#switchToCreateSchedule" styleClass="nav-button" text="Create Schedule" />
             <Button fx:id="leaveButton2" onAction="#switchToLeaveRequestPage" styleClass="nav-button" text="Leave Request" />
