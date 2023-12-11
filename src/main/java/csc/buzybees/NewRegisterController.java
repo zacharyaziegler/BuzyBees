@@ -23,6 +23,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -61,7 +62,10 @@ public class NewRegisterController {
     private Button registerButton;
 
     private Firestore firestore;
+    
     private FirestoreContext firestoreContext;
+    @FXML
+    private CheckBox isManager;
 
     public NewRegisterController() {
         firestoreContext = new FirestoreContext();
@@ -80,6 +84,8 @@ public class NewRegisterController {
         newUser.setState(txtState.getText());
         newUser.setZipCode(txtZipCode.getText());
         newUser.setPhoneNumber(txtPhoneNum.getText());
+        newUser.setManager(isManager.isSelected());
+       
 
         ApiFuture<WriteResult> future = firestore.collection("users").document(userId).set(newUser);
 

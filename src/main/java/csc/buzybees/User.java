@@ -29,6 +29,7 @@ public class User {
     private String username;
     private String password;
     private List<Shift> schedule; // List to store the user's schedule
+    private boolean isManager;
     
     
     /**
@@ -48,6 +49,7 @@ public class User {
         this.username = "";
         this.password = "";
         this.schedule = new ArrayList<>();
+        this.isManager = false;
     }
     
     /**
@@ -66,10 +68,11 @@ public class User {
      * @param username
      * @param password 
      * @param schedule 
+     * @param isManager 
      */
     public User(String firstName, String lastName, String dateOfBirth, String jobPosition, String streetAddress,
                 String city, String state, String zipCode, String phoneNumber, String email, String username,
-                String password, List<Shift> schedule) {
+                String password, List<Shift> schedule, boolean isManager) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -83,6 +86,7 @@ public class User {
         this.username = username;
         this.password = password;
         this.schedule = schedule; // Initialize the schedule
+        this.isManager = isManager;
     }
   
 
@@ -197,5 +201,13 @@ public class User {
     
     public void setSchedule(List<Shift> schedule) {
         this.schedule = schedule;
+    }
+    
+    public boolean isManager() {
+        return isManager;
+    }
+    
+    public void setManager(boolean isManager) {
+        this.isManager = isManager;
     }
 }

@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LeaveRequestPage">
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" stylesheets="@background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc.buzybees.LeaveRequestPage">
     <children>
       <HBox layoutX="-5.0" prefHeight="68.0" prefWidth="1316.0" spacing="10" styleClass="shiny-yellow-background,nav-border" stylesheets="@background.css">
          <padding>
@@ -66,12 +66,10 @@
       
                  
                 <Label fx:id="employeeText" text="Select Employee to Swap:" visible="false" GridPane.rowIndex="3" />
-                <ComboBox fx:id="employeeComboBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <ComboBox fx:id="employeeComboBox" prefHeight="33.0" prefWidth="165.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Employee 1" />
-                            <String fx:value="Employee 2" />
-                          
+
                            </FXCollections>
                     </items>
                 </ComboBox>
