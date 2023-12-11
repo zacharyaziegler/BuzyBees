@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -54,6 +55,20 @@ public class MyInfoController {
     
      private Firestore firestore;
     private ExecutorService executorService = Executors.newSingleThreadExecutor();
+    @FXML
+    private Button homeButton1;
+    @FXML
+    private Button myInfoButton1;
+    @FXML
+    private Button tasksButton1;
+    @FXML
+    private Button scheduleButton1;
+    @FXML
+    private Button scheduleButton11;
+    @FXML
+    private Button leaveButton2;
+    @FXML
+    private Button leaveButton1;
 
     // This method will be called by the FXMLLoader when initialization is complete
     public void initialize() {
@@ -175,5 +190,10 @@ public class MyInfoController {
         App.setRoot("login");
     }
     
+    @FXML
+    private void switchToTasks(ActionEvent event) throws IOException {
+            App.setRoot("tasks");
+      
+        }
 }
 

@@ -46,7 +46,7 @@
          <children>
             <Region prefHeight="60.0" prefWidth="250.0" />
             <Button fx:id="homeButton1" onAction="#switchToHome" styleClass="nav-button" text="Home" />
-            <Button fx:id="myInfoButton1" styleClass="nav-button" text="My Info" />
+            <Button fx:id="myInfoButton1" onAction="#switchToMyInfo" styleClass="nav-button" text="My Info" />
             <Button fx:id="tasksButton1" onAction="#switchToTasks" styleClass="nav-button" text="Tasks" />
             <Button fx:id="scheduleButton1" onAction="#switchToSchedule" styleClass="nav-button" text="View Schedule" />
             <Button fx:id="scheduleButton11" layoutX="649.0" layoutY="17.0" onAction="#switchToCreateSchedule" styleClass="nav-button" text="Create Schedule" />

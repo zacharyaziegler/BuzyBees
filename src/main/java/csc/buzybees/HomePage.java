@@ -120,10 +120,4 @@ public class HomePage {
     private void switchToMyInfo() throws IOException {
         App.setRoot("myInfo");
     }
-    
-    @FXML
-    private void switchToMyInfo() throws IOException {
-        App.setRoot("myInfo");
-    }
-    
 }
