@@ -121,4 +121,9 @@ public class HomePage {
         App.setRoot("myInfo");
     }
     
+    @FXML
+    private void switchToMyInfo() throws IOException {
+        App.setRoot("myInfo");
+    }
+    
 }
